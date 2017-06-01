@@ -10,6 +10,11 @@ end
 gem 'rails', '~> 5.0.1'
 # Use bcrypt to hash passwords
 gem "bcrypt", '3.1.11'
+# Use Faker to make sample users with semi-realistic names and email addresses
+gem 'faker', '1.6.6'
+# Show just a few users
+gem 'will_paginate', '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Use Bootstrap in sass.
 gem 'bootstrap-sass', '3.3.6'
 # Use sqlite3 as the database for Active Record
