@@ -1,4 +1,3 @@
-# User
 class User < ApplicationRecord
   attr_accessor :remember_token
 

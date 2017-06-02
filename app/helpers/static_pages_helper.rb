@@ -1,3 +1,2 @@
-# StaticPagesHelper
 module StaticPagesHelper
 end
