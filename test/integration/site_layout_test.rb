@@ -41,6 +41,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get edit_user_path(@user)
     assert_select 'title', full_title('Edit user')
     delete logout_path
-    assert_not is_logged_in?
+    assert_not logged_in?
   end
 end
