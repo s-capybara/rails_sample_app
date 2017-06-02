@@ -1,0 +1,25 @@
+Rails:
+  Enabled: true
+
+require: rubocop-rspec
+
+AsciiComments:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - '**/Guardfile'
+    - !ruby/regexp /old_and_unused\.rb$/
