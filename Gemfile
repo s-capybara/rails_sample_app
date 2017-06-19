@@ -11,6 +11,9 @@ gem 'rails', '~> 5.0.1'
 gem 'bcrypt', '3.1.11'
 # Use Faker to make sample users with semi-realistic names and email addresses
 gem 'faker', '1.6.6'
+gem 'carrierwave', '1.1.0'
+gem 'mini_magick', '4.7.0'
+gem 'fog', '1.40.0'
 # Show just a few users. Use git repository to suprress warnings.
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'will_paginate', git: 'https://github.com/asurin/will_paginate'
