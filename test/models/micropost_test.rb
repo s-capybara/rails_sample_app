@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class MicropostTest < ActiveSupport::TestCase
-
   def setup
     @user = users(:michael)
     @micropost = @user.microposts.build(content: 'Lorem ipsum',
@@ -32,7 +31,7 @@ class MicropostTest < ActiveSupport::TestCase
   end
 
   test 'associated microposts should be destroyed' do
-    user = users(:archer)
+    user = users(:simple)
     user.save
     user.microposts.create!(content: 'Lorem ipsum')
     assert_difference 'Micropost.count', -1 do
