@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SiteLayoutTest < ActionDispatch::IntegrationTest
   def setup
-    @user = users(:michael)
+    @user = users(:simple)
   end
 
   test 'layout link without logging in' do
@@ -29,7 +29,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', about_path, count: 1
     assert_select 'a[href=?]', contact_path, count: 1
     assert_select 'a[href=?]', users_path, count: 1
-    assert_select 'a[href=?]', user_path(@user), count: 1
+    assert_select 'a[href=?]', user_path(@user), count: 3
     assert_select 'a[href=?]', edit_user_path(@user), count: 1
     assert_select 'a[href=?]', logout_path, count: 1
     get contact_path
@@ -37,7 +37,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get users_path
     assert_select 'title', full_title('All users')
     get user_path(@user)
-    assert_select 'title', full_title('Michael Example')
+    assert_select 'title', full_title('Firstname Familyname')
     get edit_user_path(@user)
     assert_select 'title', full_title('Edit user')
     delete logout_path
